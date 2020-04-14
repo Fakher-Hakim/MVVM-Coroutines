@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="std_width">300dp</dimen>
+    <dimen name="std_small_width">150dp</dimen>
+    <dimen name="std_x_large_margin">64dp</dimen>
+    <dimen name="std_large_margin">32dp</dimen>
+    <dimen name="std_normal_margin">16dp</dimen>
+    <dimen name="std_small_margin">8dp</dimen>
+</resources>

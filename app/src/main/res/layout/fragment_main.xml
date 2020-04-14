@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fakher.multimodule.mvvm.usecase.main.MainFragment">
+
+    <LinearLayout
+        android:id="@+id/userNameHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_normal_margin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/usernameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasksList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/std_small_margin"
+        app:layout_constraintBottom_toTopOf="@id/actionsHolder"
+        app:layout_constraintTop_toBottomOf="@id/mainLoading" />
+
+    <TextView
+        android:id="@+id/noTaskTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No tasks for you today :)"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/actionsHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainLoading" />
+
+    <LinearLayout
+        android:id="@+id/actionsHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/std_small_margin"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/signoutBtn"
+            style="@style/StandardButton"
+            android:layout_width="@dimen/std_small_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/std_small_margin"
+            android:text="LOG OUT" />
+
+        <Button
+            android:id="@+id/deleteUserBtn"
+            style="@style/StandardButton"
+            android:layout_width="@dimen/std_small_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/std_small_margin"
+            android:text="DELETE USER" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/mainLoading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userNameHolder" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
