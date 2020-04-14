@@ -1,11 +1,9 @@
 package com.fakher.multimodule.mvvm.repository
 
-import android.content.Context
-import com.fakher.multimodule.mvvm.database.MainDatabase
 import com.fakher.multimodule.mvvm.database.User
 import com.fakher.multimodule.mvvm.database.UserDao
 
-class UserRepository(val userDao: UserDao) {
+class UserRepository(private val userDao: UserDao) {
 
     suspend fun insertUser(newUser: User) = userDao.insertUser(newUser)
 

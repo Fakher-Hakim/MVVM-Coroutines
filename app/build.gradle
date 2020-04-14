@@ -64,12 +64,12 @@ dependencies {
     implementation 'com.facebook.stetho:stetho:1.5.1'
 
     testImplementation "android.arch.core:core-testing:1.1.1"
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
 
     testImplementation 'junit:junit:4.12'
     testImplementation "io.mockk:mockk:1.9.3"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
 
     androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
